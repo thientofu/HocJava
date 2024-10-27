@@ -12,6 +12,11 @@ public class Product {
         this.productTax = productTax;
     }
 
+    public Product(String productName, double productPrice) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+    }
+
     public double getProductTax() {
         return productTax;
     }
@@ -36,10 +41,6 @@ public class Product {
         this.productName = productName;
     }
 
-    public Product nhapThongTin(String productName, double productPrice, double productTax) {
-        Product pr = new Product(productName, productPrice, productTax);
-        return pr;
-    }
 
 
 
