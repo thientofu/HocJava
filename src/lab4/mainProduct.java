@@ -2,10 +2,8 @@ package lab4;
 
 public class mainProduct {
     public static void main(String[] args) {
-        Product test = new Product();
-        Product pr1 = test.nhapThongTin("computer", 200, 0.1);
-        test.xuatThongTin(pr1);
-        System.out.println("Tax = " + test.getTaxPrice(pr1.getProductTax(), pr1.getProductPrice()));
+        Product product_1 = new Product("computer", 200, 0.1);
+        System.out.println("Tax = " + product_1.getTaxPrice());
 
         DemoEncapsulation demo = new DemoEncapsulation(10,"khoand");
         demo.setSalary(1000);

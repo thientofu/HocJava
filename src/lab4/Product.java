@@ -5,9 +5,6 @@ public class Product {
     private double productPrice;
     private double productTax;
 
-    public Product() {
-
-    }
 
     public Product(String productName, double productPrice, double productTax) {
         this.productName = productName;
@@ -44,11 +41,13 @@ public class Product {
         return pr;
     }
 
+
+
     public void xuatThongTin(Product pr) {
         System.out.println("Tên sản phẩm: " + pr.getProductName() + " Giá sản phẩm: " + pr.getProductPrice() + " Thuế sản phẩm: " + pr.getProductTax());
     }
 
-    public double getTaxPrice(double tax, double price) {
-        return price * tax;
+    public double getTaxPrice() {
+        return this.productPrice * this.productTax;
     }
 }
