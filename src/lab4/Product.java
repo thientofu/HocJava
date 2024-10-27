@@ -4,6 +4,7 @@ public class Product {
     private String productName;
     private double productPrice;
     private double productTax;
+    protected long value_protect;
 
 
     public Product(String productName, double productPrice, double productTax) {
@@ -51,4 +52,5 @@ public class Product {
     public double getTaxPrice() {
         return this.productPrice * this.productTax;
     }
+
 }
