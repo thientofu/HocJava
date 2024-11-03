@@ -2,7 +2,7 @@ package baitap.Lab6;
 
 import java.util.ArrayList;
 
-public class mainStudent {
+public class MainStudent {
     public static void main(String[] args) {
         Student st1 = new Student("Phan Thanh Thiện", "1");
         Student st2 = new Student("Nguyễn Thanh Thiện", "2");
