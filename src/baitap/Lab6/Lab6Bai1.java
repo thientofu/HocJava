@@ -11,13 +11,9 @@ public class Lab6Bai1 {
         String password = sc.nextLine();
         System.out.println("username: " + username + " password: " + password);
 
-        int usernamelength = username.length();
-        int passwordlength = password.length();
 
-        if(usernamelength > 6 || passwordlength > 6) {
+        if(username.equals("thientofu") || password.length() > 6) {
             System.out.println("Hợp Lệ");
-        }else{
-            System.out.println("Không hợp lệ");
         }
     }
 }
