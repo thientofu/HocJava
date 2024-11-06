@@ -4,6 +4,7 @@ public class SinhVienIT extends SinhVien {
     private double scoreJava;
     private double scoreHTML;
 
+
     @Override
     double getScore() {
         return(this.scoreJava + this.scoreHTML) / 3;
