@@ -15,6 +15,8 @@ public class MainStudent {
         list.add(st3);
         list.add(st4);
 
+
+
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getName().startsWith("Phan")){
                 System.out.println(list.get(i));
