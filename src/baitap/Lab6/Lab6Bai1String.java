@@ -2,7 +2,7 @@ package baitap.Lab6;
 
 import java.util.Scanner;
 
-public class Lab6Bai1 {
+public class Lab6Bai1String {
     public static void main(String[] args) {
 
         //Method thuường dùng cho String:Equal dùng để so sánh trả về giá trị true hoặc false
