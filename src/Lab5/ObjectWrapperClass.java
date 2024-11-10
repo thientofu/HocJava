@@ -27,6 +27,7 @@ public class ObjectWrapperClass {
 
     public static int absoluteValue(int i) {
         return (i < 0) ? -i : i;
+        //biến = Biểu thức logic ? Câu lệnh khi biểu thức trả về true : Câu lệnh khi biểu thức trả về false;
     }
 
     
