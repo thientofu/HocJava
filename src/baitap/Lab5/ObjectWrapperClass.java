@@ -4,7 +4,7 @@
 
 //Boxing là convert từ primitive type chuyển thành Object
 //Unboxing là convert từ Object chuyển thành Primitive type
-package Lab5;
+package baitap.Lab5;
 
 import java.util.ArrayList;
 import java.util.List;

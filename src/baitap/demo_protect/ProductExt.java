@@ -1,6 +1,6 @@
 package baitap.demo_protect;
 
-import lab4.Product;
+import baitap.lab4.Product;
 
 public class ProductExt extends Product {
     public ProductExt(String productName, double productPrice, double productTax) {

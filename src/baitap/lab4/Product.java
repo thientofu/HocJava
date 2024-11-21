@@ -1,4 +1,4 @@
-package lab4;
+package baitap.lab4;
 
 public class Product {
     private String productName;
