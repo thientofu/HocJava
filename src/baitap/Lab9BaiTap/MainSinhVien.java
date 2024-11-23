@@ -17,7 +17,10 @@ public class MainSinhVien {
                 System.out.println("Mã số nhân viên không hợp lệ");
                 sc.nextLine();
             }
+
         }
+        sc.close();
+        return result;
     }
 
     public static double nhapDiemsc(){
@@ -58,8 +61,6 @@ public static int nhapDoTuoi(){
             System.out.println("Độ tuổi là số nguyên");
             sc.nextLine();
         }
-        sc.close();
-        return result;
     }
 }
     public static void main(String[] args) {
