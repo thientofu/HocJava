@@ -1,4 +1,4 @@
-package Lab9BaiTap;
+package baitap.Lab9BaiTap;
 
 public class SinhVien {
     private int masv;
