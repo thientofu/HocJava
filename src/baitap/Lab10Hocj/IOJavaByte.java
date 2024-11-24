@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+//Bảng chứ
+
 public class IOJavaByte {
     public static void main(String[] args) throws IOException {
 
