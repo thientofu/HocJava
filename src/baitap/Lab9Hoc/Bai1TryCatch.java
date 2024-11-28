@@ -2,6 +2,7 @@ package baitap.Lab9Hoc;
 
 import java.util.Scanner;
 
+
 // Exception là các lỗi xảy ra sau khi " chạy chương trình và khiến chương trình dừng lại
 
 
@@ -10,7 +11,6 @@ import java.util.Scanner;
 // Ví dụ, một file được mở, nhưng file đó không thể tìm thấy và ngoại lệ xảy ra.
 // Những ngoại lệ này không thể được bỏ qua trong quá trình biên dịch.
 // Checked Exception là các lớp mà kế thừa lớp Throwable ngoại trừ RuntimeException và Error.
-
 
 //Unchecked Exception
 //Exception này khá nguy hiểm, khi mà trình biên dịch không thể nào kiểm tra giúp bạn sự lai lệch luồng có thể xảy đến như trên kia.
@@ -42,9 +42,10 @@ public class Bai1TryCatch {
                     break;
                 }   catch (Exception e) {
                     System.out.println(" run error");
+                    throw new Exception(" chia cho khong");
                     //  TODO: handle exception
                 }
-                break;
+//                break;
             } catch (Exception e) {
                 sc.next();
                 continue;
