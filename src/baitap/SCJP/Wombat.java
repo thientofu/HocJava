@@ -1,5 +1,5 @@
 package baitap.SCJP;
-
+//Ví dụ trang 44 nói về việc nhiều câu lệnh có ở trên 1 dòng
 class Wombat implements Runnable {
   private int i;
   public synchronized void run()
