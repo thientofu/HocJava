@@ -1,0 +1,34 @@
+certifications = chứng chỉ
+one new one = phiên bản mới
+
+estimates = ước tính
+a standard of the code = đoạn mã chuẩn
+effort = sự cố gắng
+subsequent maintenance = bảo trì
+echancement = nâng cấp
+Agreeing on = đồng ý về, Việc thống nhất,...
+we recommend it highly = khuyên bạn nên sử dụng nó
+limitations - hạn chế
+cramped = chật chỗ, khó đọc
+
+curly braces = dấu ngoặc nhọn
+
+Consider yourself forewarned = coi như bạn được cảnh báo trước
+
+sick and twisted = disgusting and terrible = kinh tởm và kinh khủng
+
+complex concepts = khái niệm phức tạp
+
+naming standard = tiêu chuẩn đặt tên
+
+API = Application Programming Interface = Giao diện lập trình ứng dụng
+
+Beans 'R Us
+
+Integrated Development Environment = môi trường phát triển tích hợp
+
+components = thành phần
+
+guarantee = đảm bảo
+
+that software company down the street = công ty phần mềm
