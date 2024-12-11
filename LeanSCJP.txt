@@ -1,0 +1,6 @@
+Đầu tiên, JavaBeans là các class Java có properties(thuộc tính). Cho mục đích của chúng ta, coi tất cả properties(thuộc tính) như là private(riêng tư) instance variables. Vì chúng là private(riêng tư), nên chỉ có 1 cách duy nhất để chúng có thể accessed(truy cập) từ bên ngoài class của chúng là bằng cách thông qua methods ở trong class. Methods có thể thay đổi property's value(giá trị thuộc tính) được gọi là setter methods, và methods có thể retrive(truy xuất) property's value(giá trị thuộc tính) được gọi là getter methods. Luật đặt tên JavaBeans bạn cần phải biết cho kì thi:
+
+JavaBeans Property Naming Rules
+
+-Nếu property(thuộc tính) không phải là boolean(true or false), method getter prefix(tiền tố) nên là get. 
+Ví dụ: getSize() là 
