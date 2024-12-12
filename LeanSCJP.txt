@@ -3,4 +3,21 @@
 JavaBeans Property Naming Rules
 
 -Nếu property(thuộc tính) không phải là boolean(true or false), method getter prefix(tiền tố) nên là get. 
-Ví dụ: getSize() là 
+Ví dụ: getSize() là tên getter có hiệu lực cho thuộc tính có tên là "size". Hãy nhớ rằng bạn không cần có 1 tên biên tên là size. Tên của thành phần là inferred(suy ra) từ getter và setters, không thông qua từ variables ở trong class. Thức mà trả về cho bạn từ getSize() là tuỳ thuộc về bạn.
+-Nếu thuộc tính là kiểu boolean, method getter' prefix(tiền tố) nên là get hoặc is.
+Ví dụ:getStopped() hoặc isStopped() đều là tên hợp lệ cho thuộc tính boolean
+-method setter'prefix nên là set.
+Ví dụ:setSize() là 1 cái tên hợp lệ JavaBean cho thuộc tính có tên là size.
+- Để hoàn thành tên của getter hoặc setter method, đổi chữ cái đầu tiền của thuộc tính thành viết hoa và sau đó nối nó vào prefix(get, is, or set)
+-setter method chữ ký nên được đánh dấu là public, với a void trả về type(kiểu dữ liệu) và argument that represents(đại diện) cho kiểu thuộc tính
+-Getter method signatures nên được đánh dấu bằng public, take no arguments(không tranh luận), và có kiểu trả về trùng với argument type của setter methods cho property(thuộc tính)
+
+Thứ hai, JavaBeans spec hỗ trợ events(sự kiện), cái mà cho phép components(thành phần) thông báo cho nhau khi mà có chuyện gì đó sảy ra. event model là thường sử dụng ở trong GUI(Graphical User Interface) applications khi event như là mouse click là chọn multicast(phát đa hướng) đến nhiều hướng đối tượng có nhiều thứ để làm khi mouse click xảy ra. Cáu đối tượng trả về thông tin về event thì được gọi là listeners.
+EX:bạn cần phải biết về methods dùng để add or remove listeners từ event cần phải tuân thủ luật đặt tên:
+
+Java Listener Naming Rules
+-Tên của Listener method sử dụng để "register" với source event nên có prefix(tiền tố) add, cho phép bởi listeners type.
+ex: addActionListener() là 1 tên hợp lý cho method rằng event source sẽ cho phép người khác register(đăng ký) cho Action events.
+-Tên listeners method sử dụng remove("unregister") listener nên sử dụng prefix(tiền tố) remove, cho phép bởi listener type (sử dụng luật như registration add method)
+-type(kiểu dữ liệu) của listener để added or removed nên được thông qua như là argument(lý lẽ) đến method
+-Tên Listener method nên kết thúc với từ"Listener"
