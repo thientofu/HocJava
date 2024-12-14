@@ -1,0 +1,111 @@
+Identifiers và Keywords
+tất cả components(thành phần) Java chúng ta chỉ nói đến--classes, variables, and methods-- cần cái tên. Trong Java tên của nó đều gọi là identifiers,
+ và như bạn mong đợi,chúng nó có luật cho cấu thành nên một mã xác định cho Java. Ngoài nhưng thứ hợp phấp thì Java programmers ( và Sun) 
+ đã tạo nên quy ước cho tên methods, variables và classes.
+như tất tả ngôn ngữ lập trình khác, Java có a set of build-in(một tập hợp) keywords. nhưng keywords không nên sử dụng như identifiers(định danh). 
+sau cái chapter này chúng ta sẽ review chi tiết của luật đặt tên, conventions(quy ước), và Java keywords
+
+Inheritance(Kế thừa)
+Trọng tâm Java và hướng đối tượng ngôn ngữ là inheritance(kế thừa), cái mà cho phép code được xác định trong 1 class(lớp) được reused(tái sử dụng) trong các class khác. trong Java, bạn có thể định nghĩa tổng quan(nhiều abstract(trừu tượng) class cha, và sau đó mở rộng nó với nhiều lớp con. lớp cha không biết gì về lớp kế thừa của nó, nhưng tất cả lớp con kế thừa từ lớp cha phải explicitly declare(khai báo) mỗi quan hệ kế thừa. 1 lớp con kế thừa từ lớp cha tự động kế thừa variable and methods xác định bởi lớp cha, nhưng có thể override(ghi đè) methods lớp cha để xác định nhiều hành vi
+INTERFACES(GIAO DIỆN)
+companion(người bạn đồng hành) mạnh mẽ inheritance là sử dụng interface. interfaces như là 100% class cha trừu tương xác định method 1 class con. Nói cách khác, interface ANIMAL có thể tuyên bố rằng ANIMAL implementation(thực hiện) classes có method EAT(), nhưng giao diện ANIMAL không cung cấp bất kì logic cho method EAT(). That means it's up to the classes that implement the Animal interface to define the actual code for how that particular ANIMAL type behaves when its EAT() method is invoked
+Finding Other Classes(Tìm kiếm các lớp khác)
+
+LEGAL IDENTIFIERS
+Quy luật để compiler(biên dịch) xác định tên có hợp pháp hay không
+
+SUN'S JAVA CODE CONVENTIONS.
+Khuyến nghị của Sun cho việc đặt tên Classes, variable, và methods.Chúng ta thường tuân thủ các tiêu chuẩn theo cuốn sách, ngoại trừ khi chúng ta có gắng chỉ cho bạn 1 câu coded khó. Bạn sẽ không yêu cầu câu hỏi về Java Code Conventions, nhưng chúng tôi sẽ khuyên cho lập trình viên sử dụng nó
+
+JAVABEANS NAMING STANDARDS 
+Các yêu cầu đặt tên của JavaBeans specification. bạn không cần thiết để học JavaBeans specification cho kì thi, nhưng bạn cần biết 1 ít về quy luật đặt tên cho JavaBeans chúng ta sẽ học nó trong chapter này
+
+LEGAL IDENTIFIERS
+Về mặt kỹ thuật, các định danh hợp pháp phải chỉ bao gồm Unicode, number, currency symbols(ký hiệu tiền tệ), and connecting characters(ký hiệu kết nối _).Bài kiểm tra không đi sâu vào chi tiết về phạm vi nào của bộ ký tự Unicode được xem là đủ điều kiện là chữ cái và chữ số. Ví dụ, bạn không cần biết rằng chữ số Tây Tạng nằm trong phạm vi từ \u0420 to \u0f29.
+
+-Identifiers bắt đầu bằng letter, currency characters, hoặc connecting characters (_).Định danh không bắt đầu với chữ số.
+-Sau ký tự đầu tiên, định danh có thể chứa bất kỳ tổ hợp nào của các chữ cái, ký tự tiền tệ, ký tự kết nối hoặc số.
+-Trên thực tế, không có giới hạn về số lượng ký tự mà Identifiers có thể chứa
+-Bạn không thể sử dụng Java keyword làm định danh. 
+
+SUN'S JAVA CODE CONVENTIONS
+Sun estimates(ước tính) rằng hầu như lifetime(thời gian cuộc đời) của a standard piece of code(đoạn mã chuẩn), 20 % của effort ( sự cố gắng) sẽ đi tới sự sáng tạo original(nguyên bản) và testing(thử nghiệm) của code, và 80% của sự cố gắng sẽ đi tới subsequent maintenance (bảo trì) và nâng cấp của code. Việc thống nhất và coding(mã hóa) một bộ tiêu chuẩn mã giúp giảm bớt nỗ lực liên quan đeens việc testing(kiểm tra), maintenance(bảo trì) và enhancing(nâng cấp) bất kì đoạn code nào.Sun đã tạo nên một bộ coding tiêu chuẩn cho Java, và published(công khai) những tiêu chuẩn trong document có tiêu đề cleverly(khéo léo)"Java Code Conventions" cái mà bạn sẽ ìm thấy tại java.sun.com. nó là 1 document tuyệt, ngắn và dễ để đọc và chúng tôi khuyên bạn nên sử dụng nó.
+
+Như đã nói, bạn sẽ tìm được nhiều câu hỏi trong kiểm tra không tuân theo code conventions(tiêu chuẩn về code), bởi vì limitations (hạn chế) ở trong test engine(công nghệ kiểm tra) được sử dụng trong bài kiểm tra quốc tế. 1 trong nhưng thứ tuyệt vời về Sun certifications( chứng chỉ) là kì thi được thống nhất trên thế giới. Để đạt điều đó, đoạn code mà bạn sẽ thấy ở trong kì thi thật thì thường khó đọc, và không tuân thủ theo Sun'code tiêu chuẩn. Đẻ giúp bạn rèn luyện cho kỳ thi, chúng tôi thường đưa ra các danh sách mã có giao diện khó đọc tương tự và chỉ indenting(thụt lề) của code chúng ta 2 space(dấu cách) khác với tiêu chuẩn Sun là 4 dấu cách
+
+Chúng ta sẽ jam(kẹp) lại nhưng dấu curly braces gần với nhau không tự nhiên, và thỉnh thoảng đặt nhiều câu ở trên 1 dòng.
+Coi như bạn được cảnh báo trước, bạn sẽ thấy nhiều listings(danh sách) code, mock question( câu hỏi giả định), và nhưng câu hỏi kỳ thì thật sự đều kinh tởm và kinh khủng. Không ai muốn bạn viết cái code như vậy. Không phải cho công ty của bạn, không phải đồng nghiệp của bạn, không phải chúng ta, không phải Sun, và không phải nhóm tạo kỳ thi. Code như thế này chỉ được ra để complex concepts(khái niệm phức tạp) có thể được kiểm tra trong một công cụ kiểm tra phổ quát. 1 tiêu chuẩn được tuân thủ nhiều nhất có thể trong kỳ thi thực tế là naming standards(tiêu chuẩn đặt tên). 
+
+CLASSES AND INTERFACES 
+Từ đầu tiên nên là viết hoa và nếu từ sau đó nối thành 1 form name thì viết hoa từ đầu (format đó được gọi là "camelCase")
+EX: Dog
+	Account
+	PrintWriter
+METHODS
+từ đầu tiên nên viết thường và sau đó dùng luật bình thường camelCase. Ngoài ra, tên nên là cụm Danh-Động từ
+EX: getBalance
+	doCalculation
+	setCustomerName
+VARIABLE
+dùng như methods.Sun khuyến nghị nó nên ngắn, cái tên có ý nghĩa
+CONSTANTS
+Java constants được tạo bởi marking variable static và final
+
+JAVABEANS STANDARDS
+The JavaBeans spec là được dự định để hỗ trợ lập trình viên Java tạo nên thành phần Java cái mà có thể sử dụng bởi lập trình viên Java khác ở trong 1 visual IDE(Integrated Development Environment) tool(công cụ) (như là Esclipe or NetBeans). Như là 1 lập trình viên Java, bạn muốn có thể sử dụng components(thành phần) từ Java API(Application Programming Interface), nhưng nó sẽ rất tuyệt nếu bạn có thể mua java component bạn muốn từ "Beans 'R Us" công ty phần mềm. và 
+
+Đầu tiên, JavaBeans là các class Java có properties(thuộc tính). Cho mục đích của chúng ta, coi tất cả properties(thuộc tính) như là private(riêng tư) instance variables. Vì chúng là private(riêng tư), nên chỉ có 1 cách duy nhất để chúng có thể accessed(truy cập) từ bên ngoài class của chúng là bằng cách thông qua methods ở trong class. Methods có thể thay đổi property's value(giá trị thuộc tính) được gọi là setter methods, và methods có thể retrive(truy xuất) property's value(giá trị thuộc tính) được gọi là getter methods. Luật đặt tên JavaBeans bạn cần phải biết cho kì thi:
+
+JavaBeans Property Naming Rules
+
+-Nếu property(thuộc tính) không phải là boolean(true or false), method getter prefix(tiền tố) nên là get. 
+Ví dụ: getSize() là tên getter có hiệu lực cho thuộc tính có tên là "size". Hãy nhớ rằng bạn không cần có 1 tên biên tên là size. Tên của thành phần là inferred(suy ra) từ getter và setters, không thông qua từ variables ở trong class. Thức mà trả về cho bạn từ getSize() là tuỳ thuộc về bạn.
+-Nếu thuộc tính là kiểu boolean, method getter' prefix(tiền tố) nên là get hoặc is.
+Ví dụ:getStopped() hoặc isStopped() đều là tên hợp lệ cho thuộc tính boolean
+-method setter'prefix nên là set.
+Ví dụ:setSize() là 1 cái tên hợp lệ JavaBean cho thuộc tính có tên là size.
+- Để hoàn thành tên của getter hoặc setter method, đổi chữ cái đầu tiền của thuộc tính thành viết hoa và sau đó nối nó vào prefix(get, is, or set)
+-setter method chữ ký nên được đánh dấu là public, với a void trả về type(kiểu dữ liệu) và argument that represents(đại diện) cho kiểu thuộc tính
+-Getter method signatures nên được đánh dấu bằng public, take no arguments(không tranh luận), và có kiểu trả về trùng với argument type của setter methods cho property(thuộc tính)
+
+Thứ hai, JavaBeans spec hỗ trợ events(sự kiện), cái mà cho phép components(thành phần) thông báo cho nhau khi mà có chuyện gì đó sảy ra. event model là thường sử dụng ở trong GUI(Graphical User Interface) applications khi event như là mouse click là chọn multicast(phát đa hướng) đến nhiều hướng đối tượng có nhiều thứ để làm khi mouse click xảy ra. Cáu đối tượng trả về thông tin về event thì được gọi là listeners.
+EX:bạn cần phải biết về methods dùng để add or remove listeners từ event cần phải tuân thủ luật đặt tên:
+
+Java Listener Naming Rules
+-Tên của Listener method sử dụng để "register" với source event nên có prefix(tiền tố) add, cho phép bởi listeners type.
+ex: addActionListener() là 1 tên hợp lý cho method rằng event source sẽ cho phép người khác register(đăng ký) cho Action events.
+-Tên listeners method sử dụng remove("unregister") listener nên sử dụng prefix(tiền tố) remove, cho phép bởi listener type (sử dụng luật như registration add method)
+-type(kiểu dữ liệu) của listener để added or removed nên được thông qua như là argument(lý lẽ) đến method
+-Tên Listener method nên kết thúc với từ"Listener"
+
+
+Source File Declaration Rules
+
+-Chỉ có 1 Public class cho 1 source code file
+-Comments có thể xuất hiện tại đầu hoặc cuối dòng của source code file; chúng độc lập với bất cứ quy tắc được định vị ở đây
+-Nếu có 1 public class ở trong file, tên của file nên trung với tên của public class.
+EX: 1 class khai báo như là public class Dog{} nên tên ở trong source code file là Dog.java
+-Nếu class là 1 phần của package, package statement(tuyên bố) nên là dòng đầu tiên của source code file, trước khi tuyên bố import tại thời điểm đó.
+-Thứ tự trong source file -package statement
+						  -import statement
+						  -class declaration
+-import statement và package áp dụng cho tất cả classes ở trong source code file. Nói cách khác, không có cách nào để khai báo nhiều class ở trong file và có tất cả chúng ở trong package khác nhau hoặc sử dụng import khác nhau
+-1 file có thể có nhiều hơn 1 class không phải là public
+-File với class không public có thể có cái tên không trùng với bất kì với class trong file
+
+Class Declaration và modifiers
+Có 4 access controls nhưng chỉ có 3 access modifiers. 4 access control level được gọi là default hoặc package access
+
+quy luật đặt tên của Sun là nên đảo ngược domain name, kèm thêm phân công and/or project names.
+EX: geeksanonymous.com bạn là việc trên client code cho TwelvePointOSteps program, bạn nên đặt tên như là com.geeksanonymous.steps.client
+
+Class Access
+
+Class Access là khi chúng ta nói code từ Class (A) có thể truy cập từ 1 Class (B), nó có nghĩa là class A có thể làm 3 điều sau:
+-Tạo 1 instance(thực thể) của class Beans
+-Extend(mở rộng) class B(nói cách khác là trở thành class con của class (B))
+-Access(truy cập) methods và variable trong class B, tùy thuộc vào quyền truy cập của những methods và variables.
+
+Default access 
+
+tất cả mọi class có thể access default class(nhưng trong phạm vi của 1 package)
