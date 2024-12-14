@@ -1,14 +1,23 @@
 certifications = chứng chỉ
+
 one new one = phiên bản mới
 
 estimates = ước tính
+
 a standard of the code = đoạn mã chuẩn
+
 effort = sự cố gắng
+
 subsequent maintenance = bảo trì
+
 echancement = nâng cấp
+
 Agreeing on = đồng ý về, Việc thống nhất,...
+
 we recommend it highly = khuyên bạn nên sử dụng nó
+
 limitations - hạn chế
+
 cramped = chật chỗ, khó đọc
 
 curly braces = dấu ngoặc nhọn

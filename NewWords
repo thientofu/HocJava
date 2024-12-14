@@ -1,7 +1,9 @@
 certifications = chứng chỉ
+
 one new one = phiên bản mới
 
 estimates = ước tính
+
 a standard of the code = đoạn mã chuẩn
 effort = sự cố gắng
 subsequent maintenance = bảo trì
@@ -48,3 +50,37 @@ multicast = phát đa hướng
 occurs = xảy ra
 
 argument = tham số đầu vào = biến đầu vào
+
+package-centric = tập trung vào gói
+
+assumed = tập trung
+
+JVM = Java Virtual Machine = Máy ảo Java
+
+explicit = rõ ràng
+
+reverse = đảo ngược
+
+appended = nối thêm
+
+collisions = collide = va chạm = xung đột
+
+schemes = kế hoạch
+
+guaranteed = đảm bảo
+
+assuming = giả sử
+
+instance = Thực thể
+
+independent = độc lập
+
+ positioning rules discussed here = quy tắc được định vị ở đây
+ 
+ statement = tuyền bố
+ 
+ declaration = khai báo
+ 
+ apply to = áp dụng cho
+ 
+nested = inner =  lồng nhau, bên trong
