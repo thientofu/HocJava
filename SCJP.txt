@@ -109,3 +109,16 @@ Class Access là khi chúng ta nói code từ Class (A) có thể truy cập t�
 Default access 
 
 tất cả mọi class có thể access default class(nhưng trong phạm vi của 1 package)
+
+Public access
+
+tất cả mọi class có thể access public class(trong all package)
+
+Other(nonaccess)Class Modifiers
+
+keyword final, abstract, hoặc strictfp
+strictfp là 1 keyword và nó có thể sử dụng modify 1 class hoặc 1 methods, nhưng không bao giờ là 1 variable
+có thể khai báo public + final nhưng không thể mix nonaccess lại với nhau. nhưng có thể sử dụng strictfp với final. nhưng không bao giờ đánh dấu 1 class dùng cả final và abstract.
+
+Final Classes
+Khi khai báo sử dụng keyword final thì class đấy không thể nào là class con
