@@ -1,6 +1,6 @@
 package baitap.lab4;
 
-public class Product {
+public class  Product {
     private String productName;
     private double productPrice;
     private double productTax;

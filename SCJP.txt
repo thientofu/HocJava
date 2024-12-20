@@ -109,3 +109,6 @@ Class Access là khi chúng ta nói code từ Class (A) có thể truy cập t�
 Default access 
 
 tất cả mọi class có thể access default class(nhưng trong phạm vi của 1 package)
+
+Public access
+
