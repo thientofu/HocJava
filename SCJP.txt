@@ -112,3 +112,28 @@ tất cả mọi class có thể access default class(nhưng trong phạm vi c�
 
 Public access
 
+là từ khoá cho phpes tất cả các class từ khắp tất cả package có thể truy cập vào public class.
+
+Other(Nonaccess) Class Modifiers
+Bạn có thể modify khai báo 1 class bằng keyword final, abstract, or strictfp. không thể mix modify nhưng cvos thể sử dụng strictfp + final.
+
+Final Classes
+Khi sử dụng keyword final thì có nghĩa là class đấy không thể nào là subclass.Nói cách khác là không có class nào có thể extend final class.
+
+Abstract Class
+Không thể tự khởi tạo được. Là bản thiết kế để tạo nên đối tượng.
+
+Interface
+
+Mặc định phương thức(method) trong interface là public và abstract.
+Interface thì giống 100% với abstract class.Nhưng trong khi 1 abstract class có cả 2 định dạng đó là abstract và non-abstract, thì interface chỉ có 1 phương thức abstract.1 cách khác interface thì có ít tính linh hoạt hơn abstract thể hiện ở methods và variable.
+có 1 số luật nghiêm ngặt về interface:
+-Tất cả method interface đều là public và abstract. nói 1 cách khác, bạn không cần thiết để xác định kiểu modifiers public hoặc abstract ở trong công khai method, nhưng method luôn luôn để ở public hoặc abstract.
+-Tất cả định dạng variable ở trong interface nên là public, static và final.Nói cách khác, interface có thể khai báo hằng số, instance variable
+-Methods interface không nên là static.
+-Bởi vì method interface là abstract, chúng nó không thể bị đánh dấu là final, strictfp, hoặc native.
+-1 interface có thể mở rộng(extend) 1 hoặc nhiều interface.
+-1 interface không thể mở rộng thêm bất cứ thứ gì ngoại trừ interface.
+-1 interface không thể implement 1 giao diện khác hoặc class.
+- 1 interface nên được khai báo với từ khoá interface.
+-Kiểu interface có thể sử dụng polymorphically.
