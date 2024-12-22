@@ -135,5 +135,32 @@ có 1 số luật nghiêm ngặt về interface:
 -1 interface có thể mở rộng(extend) 1 hoặc nhiều interface.
 -1 interface không thể mở rộng thêm bất cứ thứ gì ngoại trừ interface.
 -1 interface không thể implement 1 giao diện khác hoặc class.
-- 1 interface nên được khai báo với từ khoá interface.
+-1 interface nên được khai báo với từ khoá interface.
 -Kiểu interface có thể sử dụng polymorphically.
+
+Declaring Interface Constants
+
+public là các trường có quyền truy cập công khai
+
+static các trường trong interface được xem như là các biến toàn cục. Nghĩa là chúng có thể được truy cập mà không cần phải khởi tạo một thể hiện nào của interface.
+
+final nghĩa là giá trị của các trường trong interface không thể thay đổi
+
+Access modifiers
+
+class có thể sử dụng 2 trong 4 cấp độ access control level(default or public),members có thể sử dụng tất cả 4 loại:
+public
+protected
+default
+private
+
+Khi không khai báo access control level thì nó mặc định là default protection.Default và protected thì có hành vi giống nhau, ngoại trừ 1 đặc điểm khác nhau
+Bạn cần phải hiểu hai vấn đề truy cập khác nhau:
+-Liệu mã method ở trong 1 class có quyền access 1 member của class khác không
+-Liệu 1 subclass có thể kế thừa 1 member của 1 superclass của nó không
+
+Public Members
+Khi 1 method hoặc 1 variable member được khai báo là public, nó có nghĩa là tất cả các lớp, tất cả các thành phần của package, có quyền truy cập member(giả sử lớp đó có thể thẩy được)
+
+Default and protected có behavior(hành vi) khác nhau ở chỗ về subclass. Nếu protected keyword là sử dụng để định danh member, hoặc bất cứ subclass của class đang khai báo member có thể truy cập tới nó thông qua kế thừa.
+Default thì có thể truy cập tới nhưng phải cùng package
