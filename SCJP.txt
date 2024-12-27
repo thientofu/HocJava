@@ -162,5 +162,51 @@ Bạn cần phải hiểu hai vấn đề truy cập khác nhau:
 Public Members
 Khi 1 method hoặc 1 variable member được khai báo là public, nó có nghĩa là tất cả các lớp, tất cả các thành phần của package, có quyền truy cập member(giả sử lớp đó có thể thẩy được)
 
-Default and protected có behavior(hành vi) khác nhau ở chỗ về subclass. Nếu protected keyword là sử dụng để định danh member, hoặc bất cứ subclass của class đang khai báo member có thể truy cập tới nó thông qua kế thừa.
+Default and protected có behavior(hành vi) khác nhau ở chỗ về subclass.
+ Nếu protected keyword là sử dụng để định danh member, hoặc bất cứ subclass của class đang khai báo member có thể truy cập tới nó thông qua kế thừa.
 Default thì có thể truy cập tới nhưng phải cùng package
+
+Private member
+
+Đánh dấu Members bằng private thì không thể có quyền truy cập bơi code ở Class khác nơi mà member đã khai báo là private
+
+
+Local Variables và Access Modifiers
+
+Xác định Access(quyền truy cập) tới Class Members
+
+Cùng 1 class:Public, Protected, Default, Private
+Từ bất kì class ở trong cùng 1 package: Public, Protected, Default.
+Từ 1 subclass ở trong cùng 1 package: Public, Protected, Default.
+Từ 1 subclass ngoài cùng 1 package: Public, Protected(Nhưng phải thông qua inheritance(sự kế thừa)).
+Từ bất kì non-subclass bận ngoài package: Public.
+
+Nonaccess member Modifiers
+Gồm: static, final, abstract, synchronized, transient, volatile, strictfp.
+
+Final Methods.
+
+Final keyword ngăn cản 1 method từ việc ghi đè trong 1 subclass, và nó thường được sử dụng để thực thì API của 1 method
+
+Final Arguments
+
+1 final argument nên giữ nguyên giá trị mà parameter(tham số)có khi nó được truyền vào method
+
+Abstract Methods
+
+1 abstract method là 1 method được khai báo( như là abstract) nhưng nó không được implemented(thực thi).
+Nói cách khác, là method không chưa funtional code.Nó không có method body.
+
+Có 3 manh mối nó với bạn nó không phải là 1 abstract method:
+-1 Method không thể bị đánh dấu là abstract.
+- Việc khai báo method bao gồm các dấu ngoặc nhọn, trái ngược với việc kết thúc bằng dấu chấm phẩy.
+-Method này cung cấp implementation code.
+
+Bất kì class nào extends 1 class abstract thì nên implement(triển khai) tất cả abstract method của superclass, Trừ khi subclass cũng là abstract.
+-Cái concrete(bê tông)subclass của 1 abstract class thì nên implement tất cả method abstract của superclass.
+
+Synchronized METHODS
+keyword Synchronized là 1 method có thể bị truy cập bởi 1 luồng tại 1 thời điểm.
+Có thể kết hợp với 4 cấp độ quyền truy cập(public, default, protected, private).
+
+Native METHODS
