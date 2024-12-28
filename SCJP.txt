@@ -210,3 +210,24 @@ keyword Synchronized là 1 method có thể bị truy cập bởi 1 luồng tạ
 Có thể kết hợp với 4 cấp độ quyền truy cập(public, default, protected, private).
 
 Native METHODS
+
+native là 1 modifier. chỉ áp dụng cho methods.
+Note: body của native method nên là semicolon(;)(như abstract methods), chỉ ra implementation(thực thi) bị bỏ qua.
+
+Strictfp METHODS
+
+Strictfp đảm bảo rằng bạn nhận được kết quả chính xác như nhau từ các phép tính dấu phẩy động trên mọi nền tảng.
+ Nếu bạn không sử dụng strictfp, việc triển khai JVM có thể tự do sử dụng độ chính xác cao hơn nếu có.
+ 
+Methods with Variable Argument Lists
+
+Java cho phép bạn tạo method 
+
+void doStuff(String s, int a)
+
+argument = s, a
+parameters = String, int
+
+Var-args
+
+Basic syntax
