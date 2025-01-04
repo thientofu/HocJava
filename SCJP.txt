@@ -219,15 +219,51 @@ Strictfp METHODS
 Strictfp đảm bảo rằng bạn nhận được kết quả chính xác như nhau từ các phép tính dấu phẩy động trên mọi nền tảng.
  Nếu bạn không sử dụng strictfp, việc triển khai JVM có thể tự do sử dụng độ chính xác cao hơn nếu có.
  
+
+
+
 Methods with Variable Argument Lists
 
-Java cho phép bạn tạo method 
+Java cho phép method có thể khai báo 1 parameter có thể chấp nhận từ 0 tới nhiều argument, đấy được gọi là var-arg method.
+
 
 void doStuff(String s, int a)
 
 argument = s, a
 parameters = String, int
 
-Var-args
+Bản chất varargs cũng là 1 tham số được truyền vào method với cú pháp:
+<Data Types>...<Parameter's Name>
+ex:doStuff(int... x){}
 
-Basic syntax
+Quy tắc khai báo:
+Var-arg type: Khi khai báo parameter(tham số) var-arg, bạn phải chỉ định loại kiểu của argument của parameter(tham số) của method bạn nhận được(nó có thể là loại nguyên thủy hoặc loại đối tượng)
+Basic syntax:Để khai báo 1 method sử dụng 1 parameter(tham số) var-arg, bạn phải đi theo kiểu với ellipsis(dấu 3 chấm "..."), 1 space( khoảng cách, và sau đó tên của mảng sẽ chứa parameter(tham số) nhận được
+Other parameter: nó là hợp pháp để có 1 parameter(tham số) ở trong method có thể sử dụng var-arg
+Var-arg limits:Ở trong method với parameter bình thường và 1 var-arg, var-arg nên đến cuối cùng.
+
+Constructor Declaration
+Object là 1 constructed. mỗi class đều có 1 constructor, nếu bạn không tạo 1 cái, thì compiler sẽ tạo 1 cái cho bạn.
+contructors thì trông giống như method.điều khác biệt đó là contructors không có type trả về.
+Constructor quyền khai báo có thể sử dụng hết các access modifiers cơ bản và có thể dung argument(bao gồm var-args), như method.
+BIG RULE,Để có thể hiểu về constructors thì chúng nên có cùng tên với class nơi mà chúng nó đã khai báo.
+Constructor không thể đánh dấu static(do chúng liên kết với khởi tạo object)
+Không thể đánh dấu là final hoặc abstract(bởi vì chúng không thể ghi đè)
+
+Variable Declaration
+
+Primitives(nguyên thủy) 8 kiểu:char, boolean, byte, short, int, long, double, or float.
+Reference variables:là variable được khai báo một kiểu cụ thể và nó không bao giờ bị thay đổi.
+Instance Variables:
+có bất kì access control.
+có thể bị đánh dấu final hoặc transient.
+không thể abstract, synchronized, native, or strictfp.
+
+Array Declaration
+Array có thể giữ primitives(nguyên thủy) hoặc object(đối tương) nhưng array nó luôn luôn là 1 object
+Khi khai báo array, tên variable có thể bên trái hoặc phải của dấu ngoặc.
+Việc đưa độ size của array thì không bao giờ là hợp pháp.
+
+Static Variable và method
+
+50:
