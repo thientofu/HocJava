@@ -266,4 +266,4 @@ Việc đưa độ size của array thì không bao giờ là hợp pháp.
 
 Static Variable và method
 
-50:
+Interface
