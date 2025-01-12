@@ -1,5 +1,5 @@
 package baitap.FinalClass;
 
-public class Beverage {
+public final class Beverage {
     public void importantMethod() { }
 }
